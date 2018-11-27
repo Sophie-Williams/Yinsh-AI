@@ -20,15 +20,16 @@ The rules of the game can be found [here](http://www.gipf.com/yinsh/rules/rules.
 + `server.py` - This connects the clients and manages the transfer of information. 
   > `port` (mandatory) - The Server Port.  
   > `ip` (optional) - The Server IP. Default: 0.0.0.0   
-  > `n` (optional) - The Board Size. Default: 5  
+  > `n` (optional) - The Board Size
+  > `S` (optional) - The Sequence Length(K)  
   > `NC` (optional) - Number of Clients. Default: 2  
-  > `TL` (optional) - Time Limit. Default:150  
+  > `TL` (optional) - Time Limit 
   > `LOG` (optional) - The Log File.  
 
 ## Run Instructions
 Here are the sample instructions used to match two random players against each other over the server network.
 ### Setup Server
-`python server.py 10000 -n 5 -NC 2 -TL 150 -LOG server.log`
+`python server.py 10000 -n 5 -s 5 -NC 2 -TL 150 -LOG server.log`
 ### Setup Client 1
 `python  client.py 0.0.0.0 10000 RandomPlayer.py -mode GUI`
 ### Setup Client 2
